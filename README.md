@@ -5,7 +5,8 @@
   <small>Todos los jueves en Twitch: https://twitch.tv/midudev</small>
 </div>
 
-## Horario por países:**
+## Horario por países:
+
 - 18H 🇪🇸
 - 17H 🇮🇨
 - 13H 🇺🇾 🇦🇷 🇨🇱
