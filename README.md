@@ -1,9 +1,16 @@
-![node](https://github.com/midudev/curso-node-js/assets/1561955/8ff74316-d49e-4358-8b1e-07d7b5a64ed4)
-
 <div align="center">
-  <h1>Curso de Node.js desde cero</h1>
-  <small>Todos los jueves en Twitch: https://twitch.tv/midudev</small>
+
+<img alt="Curso de Node.js desde cero y práctico" src="https://github-production-user-asset-6210df.s3.amazonaws.com/1561955/254806429-8ff74316-d49e-4358-8b1e-07d7b5a64ed4.jpeg" width="500">
+
+# Curso de Node.js desde cero ❇️
+
+Curso para aprender **Node** de forma práctica
+**[Todos los jueves a las 18PM 🇪🇸 en Twitch](https://twitch.tv/midudev)**
 </div>
+
+## 📹 Videos con las clases
+
+- 01: [Introducción a Node.js y módulos](https://www.twitch.tv/videos/1876988801)
 
 ## Horario por países:
 
