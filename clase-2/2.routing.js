@@ -10,6 +10,7 @@ const processRequest = (req, res) => {
     case 'GET':
       switch (url) {
         case '/pokemon/ditto':
+
           res.setHeader('Content-Type', 'application/json; charset=utf-8')
           return res.end(JSON.stringify(dittoJSON))
         default:
