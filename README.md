@@ -10,7 +10,7 @@ Curso para aprender **Node** de forma práctica
 
 ## 📹 Videos con las clases
 
-- 01: [Introducción a Node.js y módulos](https://www.twitch.tv/videos/1876988801)
+- 01: [Introducción a Node.js y módulos](https://www.youtube.com/watch?v=yB4n_K7dZV8)
 
 ## Horario por países:
 
