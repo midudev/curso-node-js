@@ -15,6 +15,7 @@ Curso para aprender **Node** de forma práctica
 - 03: [Solución de CORS y desarrollo de API](https://www.youtube.com/watch?v=-9d3KhCqOtU)
 - 04: [Arquitectura MVC y despligue de API](https://www.youtube.com/watch?v=ev3Yxva4wI4)
 - 05: [Crea un Base de Datos MySQL y evita los hackers (buenas prácticas)](https://www.youtube.com/watch?v=eCWNQfzuuso&list=RDCMUC3aj05GEEyzdOqYM5FLSFeg&index=3)
+- 06: [Chat en TIEMPO REAL con Node.js, Socket.io, SQL, HTML y CSS](https://www.youtube.com/watch?v=WpbBhTx5R9Q)
 
 ## Horario por países:
 
