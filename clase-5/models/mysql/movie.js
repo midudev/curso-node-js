@@ -16,38 +16,28 @@ export class MovieModel {
     console.log('getAll')
 
     if (genre) {
-      const lowerCaseGenre = genre.toLowerCase()
-
-      // get genre ids from database table using genre names
       const [genres] = await connection.query(
-        'SELECT id, name FROM genre WHERE LOWER(name) = ?;',
-        [lowerCaseGenre]
+        "SELECT id, name FROM genre WHERE LOWER(name) = ?;", [genre.toLowerCase()]
       )
-
-      // no genre found
-      if (genres.length === 0) return []
-
-      // get the id from the first genre result
-      const [{ id }] = genres
-
-      // get all movies ids from database table
-      // la query a movie_genres
-      // join
-      // y devolver resultados..
-      return []
+      
+      if (genres.length === 0) return [];
+        const [{ id }] = genres;
+        const [moviesByGenre] = await connection.query(
+          "SELECT BIN_TO_UUID(m.id) AS id, m.title, m.year, m.director, m.duration, m.poster, m.rate FROM movies AS m INNER JOIN movie_genre AS mg ON m.id = mg.movie_id WHERE mg.genre_id = ?;",
+          [id]
+        );
+        return moviesByGenre;
     }
-
     const [movies] = await connection.query(
-      'SELECT title, year, director, duration, poster, rate, BIN_TO_UUID(id) id FROM movie;'
-    )
-
-    return movies
+      'SELECT BIN_TO_UUID(id) id, title, year, director, duration, poster, rate FROM movies;'
+    );
+    return movies;
   }
 
   static async getById ({ id }) {
     const [movies] = await connection.query(
       `SELECT title, year, director, duration, poster, rate, BIN_TO_UUID(id) id
-        FROM movie WHERE id = UUID_TO_BIN(?);`,
+        FROM movie WHERE BIN_TO_UUID(id) = ?;`,
       [id]
     )
 
