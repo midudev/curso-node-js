@@ -9,23 +9,18 @@
   <script type="module">
     import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
 
-    const getUsername = async () => {
+    const getUsername = () => {
       const username = localStorage.getItem('username')
-      if (username) {
-        console.log(`User existed ${username}`)
-        return username
-      }
+      if (username) return username
 
-      const res = await fetch('https://random-data-api.com/api/users/random_user')
-      const { username: randomUsername } = await res.json()
-
+      const randomUsername = `user_${Math.random().toString(36).slice(2, 8)}`
       localStorage.setItem('username', randomUsername)
       return randomUsername
     }
 
     const socket = io({
       auth: {
-        username: await getUsername(),
+        username: getUsername(),
         serverOffset: 0
       }
     })
